@@ -123,7 +123,7 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.3,
+        "min_clearance": 0.2,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.5,
         "min_groove_width": 0.0,
@@ -134,11 +134,11 @@
         "min_resolved_spokes": 2,
         "min_silk_clearance": 0.0,
         "min_text_height": 0.8,
-        "min_text_thickness": 0.08,
+        "min_text_thickness": 0.1,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.4,
+        "min_track_width": 0.2,
         "min_via_annular_width": 0.1,
-        "min_via_diameter": 1.6,
+        "min_via_diameter": 0.6,
         "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
       },
@@ -187,10 +187,7 @@
         }
       ],
       "track_widths": [
-        0.0,
-        0.3,
-        0.6,
-        1.5
+        0.0
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -222,10 +219,6 @@
         {
           "diameter": 0.0,
           "drill": 0.0
-        },
-        {
-          "diameter": 1.6,
-          "drill": 0.8
         }
       ],
       "zones_allow_external_fillets": false
@@ -606,14 +599,168 @@
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
+      },
+      {
+        "clearance": 0.3,
+        "diff_pair_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "P_Batt",
+        "pcb_color": "rgb(227, 11, 42)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 1.0,
+        "via_diameter": 0.8,
+        "via_drill": 0.5
+      },
+      {
+        "clearance": 0.25,
+        "diff_pair_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "P_Low",
+        "pcb_color": "rgb(7, 210, 23)",
+        "priority": 2,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.5,
+        "via_diameter": 0.7,
+        "via_drill": 0.4
+      },
+      {
+        "clearance": 0.3,
+        "diff_pair_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "P_Mot",
+        "pcb_color": "rgb(243, 156, 9)",
+        "priority": 1,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.8,
+        "via_diameter": 0.7,
+        "via_drill": 0.5
       }
     ],
     "meta": {
       "version": 4
     },
     "net_colors": null,
-    "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_assignments": {
+      "+3V3_Pico": [
+        "P_Low"
+      ],
+      "+5V": [
+        "P_Mot"
+      ],
+      "+5V_Pico": [
+        "P_Low"
+      ],
+      "+9V": [
+        "P_Mot"
+      ],
+      "+BATT": [
+        "P_Batt"
+      ],
+      "+V1": [
+        "P_Low"
+      ],
+      "+V2": [
+        "P_Mot"
+      ],
+      "GND": [
+        "P_Low"
+      ],
+      "GNDPWR1": [
+        "P_Batt"
+      ],
+      "GNDPWR2": [
+        "P_Low",
+        "P_Mot"
+      ],
+      "Net-(ALM1-Pin_1)": [
+        "P_Batt"
+      ],
+      "Net-(ALM2-Pin_1)": [
+        "P_Mot"
+      ],
+      "Net-(ALM3-Pin_1)": [
+        "P_Mot"
+      ],
+      "Net-(D1-K)": [
+        "P_Low"
+      ],
+      "Net-(D2-K)": [
+        "P_Low"
+      ],
+      "Net-(D3-K)": [
+        "P_Mot"
+      ],
+      "Net-(D4-K)": [
+        "P_Mot"
+      ],
+      "Net-(D5-K)": [
+        "P_Mot"
+      ],
+      "Net-(DR1-OA1)": [
+        "P_Batt"
+      ],
+      "Net-(DR1-OA2)": [
+        "P_Batt"
+      ],
+      "Net-(DR1-OB1)": [
+        "P_Batt"
+      ],
+      "Net-(DR1-OB2)": [
+        "P_Batt"
+      ],
+      "Net-(DR2-OA1)": [
+        "P_Batt"
+      ],
+      "Net-(DR2-OA2)": [
+        "P_Batt"
+      ],
+      "Net-(DR2-OB1)": [
+        "P_Batt"
+      ],
+      "Net-(DR2-OB2)": [
+        "P_Batt"
+      ],
+      "Net-(DR3-OA1)": [
+        "P_Batt"
+      ],
+      "Net-(DR3-OA2)": [
+        "P_Batt"
+      ],
+      "Net-(DR3-OB1)": [
+        "P_Batt"
+      ],
+      "Net-(DR3-OB2)": [
+        "P_Batt"
+      ],
+      "VSYS": [
+        "P_Low"
+      ]
+    },
+    "netclass_patterns": [
+      {
+        "netclass": "P_Batt",
+        "pattern": "P_batt"
+      },
+      {
+        "netclass": "P_Mot",
+        "pattern": "P_Mot"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Logic"
+      },
+      {
+        "netclass": "P_Low",
+        "pattern": "P_Low"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {

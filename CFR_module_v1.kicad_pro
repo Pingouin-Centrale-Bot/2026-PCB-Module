@@ -260,6 +260,10 @@
         ""
       ],
       [
+        "multiple_net_names|1892300|635000|a50e069a-3ae0-42bc-938f-9ca932b05f2d|f455ebd1-70b7-4652-8fbb-f3922973e126|/3500e54e-e85f-411b-abf3-a014edb1e869|/3500e54e-e85f-411b-abf3-a014edb1e869|/3500e54e-e85f-411b-abf3-a014edb1e869",
+        ""
+      ],
+      [
         "multiple_net_names|1917700|571500|a50e069a-3ae0-42bc-938f-9ca932b05f2d|f455ebd1-70b7-4652-8fbb-f3922973e126|/3500e54e-e85f-411b-abf3-a014edb1e869|/3500e54e-e85f-411b-abf3-a014edb1e869|/3500e54e-e85f-411b-abf3-a014edb1e869",
         ""
       ],
@@ -540,7 +544,7 @@
       "duplicate_sheet_names": "error",
       "endpoint_off_grid": "warning",
       "extra_units": "error",
-      "footprint_filter": "ignore",
+      "footprint_filter": "warning",
       "footprint_link_issues": "warning",
       "four_way_junction": "ignore",
       "global_label_dangling": "warning",
@@ -565,8 +569,8 @@
       "similar_label_and_power": "warning",
       "similar_labels": "warning",
       "similar_power": "warning",
-      "simulation_model_issue": "ignore",
-      "single_global_label": "ignore",
+      "simulation_model_issue": "warning",
+      "single_global_label": "warning",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
       "undefined_netclass": "error",

@@ -24435,7 +24435,7 @@
 		(uuid "40d0355c-b940-4acc-a055-45cba5465be0")
 	)
 	(gr_text "3V3"
-		(at 124.86403 75.238488 0)
+		(at 124.763504 74.614138 0)
 		(layer "F.SilkS")
 		(uuid "008bca72-46be-4595-a9a6-3f9a336fbf14")
 		(effects
@@ -24940,6 +24940,18 @@
 		(at 144.169629 127 90)
 		(layer "F.SilkS")
 		(uuid "9bbf0c99-a27e-4245-9de4-4097e4f21249")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "(Pico)"
+		(at 124.775951 75.622356 0)
+		(layer "F.SilkS")
+		(uuid "a22c6cea-0a59-495e-8872-9cfbddbe0335")
 		(effects
 			(font
 				(size 0.6 0.6)

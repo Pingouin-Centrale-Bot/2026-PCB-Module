@@ -664,6 +664,9 @@
       "+BATT": [
         "P_Batt"
       ],
+      "+V0": [
+        "P_Mot"
+      ],
       "+V1": [
         "P_Low"
       ],
@@ -683,10 +686,19 @@
       "Net-(ALM1-Pin_1)": [
         "P_Batt"
       ],
+      "Net-(ALM1-Pin_2)": [
+        "P_Batt"
+      ],
       "Net-(ALM2-Pin_1)": [
         "P_Mot"
       ],
+      "Net-(ALM2-Pin_2)": [
+        "P_Mot"
+      ],
       "Net-(ALM3-Pin_1)": [
+        "P_Mot"
+      ],
+      "Net-(ALM3-Pin_2)": [
         "P_Mot"
       ],
       "Net-(D1-K)": [
